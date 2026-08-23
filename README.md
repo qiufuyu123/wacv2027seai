@@ -1,22 +1,13 @@
-# CV4CHL - CVPR 2026 Workshop on Computer Vision for Children
+# SEAI 2027
 
-Website for the CV4CHL workshop at CVPR 2026.
+Website for **The 1st Workshop on Social Embodied AI (SEAI)** at WACV 2027.
 
-## About
+## Local preview
 
-The Workshop on Computer Vision for Children (CV4CHL) brings together pediatricians, psychologists, educationists, clinicians and computer vision researchers to discuss the future of CV design and its applications for children.
+```bash
+python3 -m http.server 8000
+```
 
-## Key Topics
+Then open `http://localhost:8000`.
 
-- Vision for Child Development
-- Vision for Pediatric Healthcare
-- Vision for Education
-- Vision for Child Psychology
-- Ethics & Social Impact
-
-## Links
-
-- Workshop Website: https://pediamedai.github.io/cv4chl/
-- Previous Workshop (ICLR 2025): https://pediamedai.com/ai4chl/
-- GitHub: https://github.com/PediaMedAI
-- Contact: ai4chl@googlegroups.com
+Workshop dates, venue, submission deadline, and submission site are intentionally marked as TBD until confirmed by the WACV 2027 workshop chairs.
