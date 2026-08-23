@@ -1,116 +1,537 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SEAI 2027 | WACV Workshop on Social Embodied AI</title>
-  <meta name="description" content="The 1st Workshop on Social Embodied AI (SEAI), held in conjunction with WACV 2027.">
-  <meta name="keywords" content="WACV 2027, Social Embodied AI, SEAI, embodied AI, human-robot interaction, multimodal perception">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>The 1st Workshop on Social Embodied AI @ WACV 2027</title>
+  <meta name="description" content="WACV 2027 Workshop on Social Embodied AI (SEAI). Bringing together computer vision, multimodal learning, embodied AI and human-robot interaction researchers.">
+  <meta name="keywords" content="WACV, WACV 2027, Social Embodied AI, SEAI, Embodied AI, Human-Robot Interaction, Social Intelligence, Multimodal Perception">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS for hover dropdown -->
+  <style>
+    .header .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+    .header .dropdown-menu {
+      min-width: 180px;
+    }
+    .header .dropdown-item:hover {
+      background-color: var(--accent-color, #f0f0f0);
+    }
+  </style>
 </head>
-<body>
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark container" aria-label="Main navigation">
-      <a class="navbar-brand" href="#home"><span>SEAI</span> 2027</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#topics">Topics</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cfp">Call for Papers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-          <li class="nav-item"><a class="nav-link" href="#organizers">Organizers</a></li>
-          <li class="nav-item"><a class="nav-link nav-cta" href="#contact">Contact</a></li>
+
+<body class="index-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#cfp">Call for Papers</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#organizers">Organizers</a></li>
+          <li><a href="#committee">Program Committee</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="dropdown">
+        <a class="cta-btn d-block dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          WACV 2027
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="https://wacv.thecvf.com/Conferences/2027" target="_blank">Main Conference</a></li>
+          <li><a class="dropdown-item" href="https://wacv.thecvf.com/Conferences/2027/CallForPapers" target="_blank">Call for Papers</a></li>
+          <li><a class="dropdown-item" href="https://wacv.thecvf.com/Conferences/2027/Dates" target="_blank">Important Dates</a></li>
         </ul>
       </div>
-    </nav>
+    </div>
   </header>
+  <!-- /Header -->
 
-  <main>
-    <section id="home" class="hero">
-      <div class="orb orb-one"></div><div class="orb orb-two"></div>
-      <div class="container hero-content">
-        <div class="eyebrow">WACV 2027 · Half-day in-person workshop</div>
-        <h1>The 1st Workshop on<br><span>Social Embodied AI</span></h1>
-        <p class="lead">Building embodied agents that understand people, adapt to partners, and act appropriately in shared physical spaces.</p>
-        <div class="hero-actions"><a href="#cfp" class="button button-primary">Explore the call for papers</a><a href="#program" class="button button-ghost">View tentative program</a></div>
-        <div class="event-strip">
-          <div><small>Conference</small><strong>WACV 2027</strong></div>
-          <div><small>Format</small><strong>Half day · In person</strong></div>
-          <div><small>Date & venue</small><strong>To be announced</strong></div>
+  <main class="main">
+
+    <!-- Hero -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/wacv27-hero.jpg" alt="" data-aos="fade-in">
+      <div class="container d-flex flex-column align-items-center text-center mt-auto">
+        <h2 data-aos="fade-up" data-aos-delay="100">
+          WACV 2027 Workshop on<br>
+          <span>Social Embodied AI</span> (SEAI)
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200">Advancing embodied agents that perceive, reason about, and act on social context in human-robot interaction and collaboration.</p>
+      </div>
+
+      <div class="about-info mt-auto position-relative">
+        <div class="container position-relative" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2>About SEAI</h2>
+              <p>
+                Recent advances in Embodied AI have improved perception, navigation and manipulation, yet these gains often fail to transfer to social environments where success depends on human-robot interaction, coordination, and social intention anticipation. Our workshop establishes Social Embodied AI as an agenda for developing and evaluating agents that perceive, reason about, and act on social context in human-robot interaction and collaboration.
+              </p>
+              <p>
+                For the WACV community, these problems directly connect visual and multimodal human understanding with interactive embodied systems. The workshop brings together researchers across computer vision, multimodal learning, embodied AI and human-robot interaction, identifies shared challenges in perception, datasets, benchmarks and evaluation, and helps define open problems and future research directions for Social Embodied AI.
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h3>Where</h3>
+              <p>Disney Springs, Buena Vista, FL</p>
+            </div>
+            <div class="col-lg-3">
+              <h3>When</h3>
+              <p>January 4th - 8th, 2027</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- /Hero -->
 
-    <section id="about" class="section">
-      <div class="container narrow"><div class="section-kicker">About SEAI</div><h2>Social intelligence is the next frontier for embodied AI.</h2>
-        <p class="big-copy">Embodied AI has made striking progress in perception, navigation, and manipulation. Yet real environments are social: agents must infer human intent, track what partners know, adapt to changing roles, and respect context-dependent norms.</p>
-        <p>SEAI brings together researchers across computer vision, multimodal learning, embodied AI, and human–robot interaction. We aim to connect social understanding with embodied action—and move evaluation beyond task completion toward behavior that is adaptive, safe, and socially appropriate.</p>
+    <!-- Overview (Topics) -->
+    <section id="overview" class="overview section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Overview</h2>
+        <p>Core challenges and research directions in Social Embodied AI.</p>
+      </div>
+
+      <div class="container">
+        <h3>Why Social Embodied AI?</h3>
+        <p>
+          Our workshop advocates for socially capable embodied agents by integrating embodied learning and robotics, interaction-centered modeling, and computational social intelligence. We aim to move beyond physical task completion toward agents that perceive, reason, and act appropriately under social cues, implicit intent, and interaction norms.
+        </p>
+        <p>
+          Social Embodied AI addresses the critical gap between autonomous navigation and manipulation capabilities and the complex requirements of human-robot interaction in real-world social environments. Success in social settings requires more than technical proficiency&mdash;it demands understanding of human intentions, cultural norms, and context-dependent social behaviors.
+        </p>
+
+        <h3>Core Challenges</h3>
+        <ul>
+          <li>
+            <strong>Challenge 1: Intention and Belief Understanding</strong>
+            <ul>
+              <li><strong>Human Intention Prediction:</strong> Infer a partner's current goal online from sparse and noisy multimodal cues to support anticipation.</li>
+              <li><strong>Belief State Inference:</strong> Represent what a partner knows and believes, including epistemic gaps and false beliefs, rather than assuming shared knowledge.</li>
+              <li><strong>Goal Hierarchy Inference:</strong> Model layered objectives where social priorities can preempt ongoing routines, enabling interruption and replanning.</li>
+              <li><strong>Emotional State Inference:</strong> Estimate affect and cognitive load from behavioral signals and adapt timing, communication, and assistance level.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Challenge 2: Collaborative Adaptation</strong>
+            <ul>
+              <li><strong>Knowledge and Awareness Estimation:</strong> Track what others can perceive, know, or access, and close information gaps through communication rather than exhaustive search.</li>
+              <li><strong>Role Inference:</strong> Capture implicit and shifting roles such as leader, follower, or advisor that regulate initiative during joint activity.</li>
+              <li><strong>Complementary Action Prediction:</strong> Anticipate actions that advance shared task structure and divide labor, avoiding redundant imitation.</li>
+              <li><strong>Interaction History Modeling:</strong> Build persistent partner models from repeated encounters, enabling personalization and smoother coordination with fewer explicit instructions.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Challenge 3: Social Norms and Affective Awareness</strong>
+            <ul>
+              <li><strong>Attention and Focus Estimation:</strong> Model engagement and interruptibility from behavior and context, supporting well-timed communication and assistance.</li>
+              <li><strong>Social Norm Recognition and Adaptation:</strong> Identify and adapt to societal, cultural, and contextual social rules, including unwritten conventions that shape predictable and appropriate behavior across settings.</li>
+              <li><strong>Preference Adaptation:</strong> Adapt to user-specific needs, privacy conventions, and routines, mapping these preferences to actionable choices such as proximity, approach angle, and timing.</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </section>
+    <!-- /Overview -->
 
-    <section id="topics" class="section section-tint"><div class="container">
-      <div class="section-kicker">Research themes</div><h2>Three challenges, one shared agenda</h2>
-      <div class="row g-4 mt-2">
-        <div class="col-lg-4"><article class="theme-card"><span>01</span><h3>Intention & belief understanding</h3><p>Infer goals, beliefs, attention, and affect from multimodal cues so agents can anticipate people and reason under partial observability.</p></article></div>
-        <div class="col-lg-4"><article class="theme-card"><span>02</span><h3>Collaborative adaptation</h3><p>Model partner knowledge, roles, preferences, and interaction history to select complementary actions and coordinate effectively.</p></article></div>
-        <div class="col-lg-4"><article class="theme-card"><span>03</span><h3>Social norms & affective awareness</h3><p>Recognize social context and regulate when, where, and how an embodied agent communicates, assists, and acts.</p></article></div>
+    <!-- CFP -->
+    <section id="cfp" class="cfp section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Call for Papers</h2>
       </div>
-    </div></section>
 
-    <section id="cfp" class="section"><div class="container">
-      <div class="section-kicker">Call for papers</div><div class="row g-5"><div class="col-lg-7"><h2>Share emerging ideas and open problems.</h2>
-        <p>We invite original research on Social Embodied AI, emphasizing visual and multimodal perception, reasoning, and interaction in human-centered environments. We welcome work-in-progress papers, position papers, and benchmark or evaluation proposals.</p>
-        <h3 class="subhead">Topics include</h3><ul class="topic-list">
-          <li>Multimodal human intention, belief, attention, and affect understanding</li><li>Visual and multimodal perception for human–robot interaction</li><li>Socially grounded scene and interaction understanding</li><li>Human action prediction and interaction-aware behavior understanding</li><li>Partner modeling, role inference, and collaborative adaptation</li><li>Social norm recognition and context-aware embodied behavior</li><li>Datasets, benchmarks, and process-oriented evaluation</li>
+      <div class="container">
+        <p>
+          The 1st Workshop on Social Embodied AI (SEAI) at WACV 2027 invites original research on Social Embodied AI, emphasizing visual and multimodal perception, reasoning, and interaction in human-centered environments. We welcome work that addresses core challenges in developing agents that perceive, reason about, and act on social context in embodied settings. Submissions may introduce new models, datasets, benchmarks, simulation environments, or real-world applications.
+        </p>
+
+        <h3>Topics of Interest</h3>
+        <ul>
+          <li>Multimodal human intention, belief, attention, and affect understanding</li>
+          <li>Visual and multimodal perception for human-robot interaction and collaboration</li>
+          <li>Socially grounded scene and interaction understanding</li>
+          <li>Human action prediction and interaction-aware behavior understanding</li>
+          <li>Partner modeling, role inference, and collaborative adaptation</li>
+          <li>Social norm recognition and context-aware embodied behavior</li>
+          <li>Datasets, benchmarks, and process-oriented evaluation for socially embodied agents</li>
         </ul>
-      </div><div class="col-lg-5"><aside class="submission-card"><div class="badge-soft">Non-archival</div><h3>Submission details</h3><p>Submissions will follow the WACV workshop template and be handled through a submission site linked here when available.</p><dl><div><dt>Submission deadline</dt><dd>TBD</dd></div><div><dt>Author notification</dt><dd>TBD</dd></div><div><dt>Submission site</dt><dd>Coming soon</dd></div></dl><p class="fine-print">The final submission policy and dates will be posted after organizer guidance is confirmed.</p></aside></div></div>
-    </div></section>
 
-    <section id="speakers" class="section section-dark"><div class="container"><div class="section-kicker">Invited speakers</div><h2>Confirmed voices shaping embodied intelligence</h2>
-      <div class="people-grid speakers-grid">
-        <article class="person"><div class="avatar">PS</div><h3>Peter Stone</h3><p>Sony AI & The University of Texas at Austin</p></article>
-        <article class="person"><img src="assets/img/speakers/Chelsea_Finn.jpg" alt="Chelsea Finn"><h3>Chelsea Finn</h3><p>Stanford University & Physical Intelligence</p></article>
-        <article class="person"><img src="assets/img/speakers/Sergey_Levine.jpg" alt="Sergey Levine"><h3>Sergey Levine</h3><p>University of California, Berkeley</p></article>
-        <article class="person"><div class="avatar">ZL</div><h3>Ziwei Liu</h3><p>Nanyang Technological University</p></article>
-        <article class="person"><div class="avatar">ML</div><h3>Miao Liu</h3><p>Tsinghua University</p></article>
+        <h3>Submission Track</h3>
+        <ul>
+          <li>
+            <strong>Non-Archival Track:</strong> We plan to accept non-archival submissions, including work-in-progress papers, position papers, and benchmark or evaluation proposals. The workshop is intended to encourage discussion of emerging ideas and open problems without limiting subsequent submission to archival venues. Submissions should follow the <a href="https://wacv.thecvf.com/Conferences/2027/AuthorGuides" target="_blank">WACV workshop template</a> and will be handled through the CMT link posted on this website.
+          </li>
+        </ul>
+
+        <h3>Review Process</h3>
+        <p>
+          Each submission will undergo a double-blind review by members of the program committee. Conflicts of interest will be managed through the submission platform.
+        </p>
+        <p>
+          <strong>Program Committee:</strong> A diverse committee of experts from computer vision, multimodal learning, robotics, human-robot interaction, and social intelligence will serve as reviewers. The confirmed list is available in the <a href="#committee">Program Committee</a> section below.
+        </p>
+
+        <h3>Important Dates (AoE)</h3>
+        <ul>
+          <li><strong>Paper Submission Deadline:</strong> TBD</li>
+          <li><strong>Author Notification:</strong> TBD</li>
+          <li><strong>Camera Ready:</strong> TBD</li>
+        </ul>
+
+        <h3>Submission Site</h3>
+        <p>
+          Papers and extended abstracts will be submitted through CMT (link TBD).
+        </p>
       </div>
-    </div></section>
+    </section>
+    <!-- /CFP -->
 
-    <section id="program" class="section"><div class="container"><div class="section-kicker">Tentative program</div><h2>A focused morning of talks and discussion</h2><p class="section-intro">The program may evolve as WACV scheduling and workshop logistics are finalized.</p>
-      <div class="schedule">
-        <div class="schedule-row"><time>8:15–8:25</time><div><strong>Opening remarks</strong><span>Workshop organizers</span></div></div>
-        <div class="schedule-row"><time>8:25–9:40</time><div><strong>Keynotes 1–3</strong><span>Peter Stone · Chelsea Finn · Sergey Levine</span></div></div>
-        <div class="schedule-row accent-row"><time>9:40–10:00</time><div><strong>Coffee break & poster discussion</strong><span>Community networking</span></div></div>
-        <div class="schedule-row"><time>10:00–10:50</time><div><strong>Keynotes 4–5</strong><span>Ziwei Liu · Miao Liu</span></div></div>
-        <div class="schedule-row"><time>10:50–11:35</time><div><strong>Contributed oral presentations</strong><span>Selected authors</span></div></div>
-        <div class="schedule-row"><time>11:35–12:20</time><div><strong>Poster discussion</strong><span>Authors and attendees</span></div></div>
-        <div class="schedule-row"><time>12:20–12:30</time><div><strong>Workshop summary</strong><span>Yuanzhe Liu</span></div></div>
+    <!-- Speakers -->
+    <section id="speakers" class="speakers section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Invited Keynote Speakers</h2>
       </div>
-    </div></section>
 
-    <section id="organizers" class="section section-tint"><div class="container"><div class="section-kicker">Organizing team</div><h2>Researchers across vision, robotics, and human-centered AI</h2>
-      <div class="people-grid organizer-grid">
-        <article class="person light"><img src="assets/img/organizers/YuanzheLiu.jpg" alt="Yuanzhe Liu"><h3>Yuanzhe Liu</h3><p>University of Illinois Urbana-Champaign</p></article>
-        <article class="person light"><div class="avatar">ZL</div><h3>Zhaoyang Li</h3><p>Rutgers University</p></article>
-        <article class="person light"><img src="assets/img/organizers/xucao.jpg" alt="Xu Cao"><h3>Xu Cao</h3><p>PediaMed AI & UIUC</p></article>
-        <article class="person light"><div class="avatar">EB</div><h3>Erdem Bıyık</h3><p>University of Southern California</p></article>
-        <article class="person light"><img src="assets/img/organizers/mengdi.png" alt="Mengdi Xu"><h3>Mengdi Xu</h3><p>Tsinghua University</p></article>
-        <article class="person light"><img src="assets/img/organizers/ismini.jpg" alt="Ismini Lourentzou"><h3>Ismini Lourentzou</h3><p>University of Illinois Urbana-Champaign</p></article>
-        <article class="person light"><div class="avatar">AB</div><h3>Abdeslam Boularias</h3><p>Rutgers University</p></article>
-        <article class="person light"><img src="assets/img/organizers/jim.jpg" alt="James M. Rehg"><h3>James M. Rehg</h3><p>University of Illinois Urbana-Champaign</p></article>
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+
+          <!-- Peter Stone -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/speakers/Peter_Stone.png" class="img-fluid" alt="Peter Stone">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://www.cs.utexas.edu/~pstone/" target="_blank">Peter Stone</a></h4>
+                  <span>Sony AI & The University of Texas at Austin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chelsea Finn -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/speakers/Chelsea_Finn.jpg" class="img-fluid" alt="Chelsea Finn">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://ai.stanford.edu/~cbfinn/" target="_blank">Chelsea Finn</a></h4>
+                  <span>Stanford University & Physical Intelligence</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sergey Levine -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/speakers/Sergey_Levine.jpg" class="img-fluid" alt="Sergey Levine">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">Sergey Levine</a></h4>
+                  <span>University of California, Berkeley</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ziwei Liu -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/speakers/Ziwei_Liu.png" class="img-fluid" alt="Ziwei Liu">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://liuziwei7.github.io/" target="_blank">Ziwei Liu</a></h4>
+                  <span>Nanyang Technological University</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Miao Liu -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/speakers/Miao_Liu.jpg" class="img-fluid" alt="Miao Liu">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://aptx4869lm.github.io/" target="_blank">Miao Liu</a></h4>
+                  <span>Tsinghua University</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /row -->
       </div>
-    </div></section>
+    </section>
+    <!-- /Speakers -->
 
-    <section id="contact" class="section contact"><div class="container narrow text-center"><div class="section-kicker">Stay connected</div><h2>Questions about SEAI 2027?</h2><p>For workshop inquiries, please contact the primary organizer.</p><a class="button button-primary" href="mailto:yl241@illinois.edu"><i class="bi bi-envelope"></i> yl241@illinois.edu</a></div></section>
+    <!-- Schedule -->
+    <section id="schedule" class="schedule section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Event Schedule</h2>
+        <p>Half-day, in person | Date: TBD (Workshops: January 4th - 5th, 2027) | Location: Disney Springs, Buena Vista, FL</p>
+      </div>
+
+      <div class="container">
+        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="all">
+            <div class="row schedule-item"><div class="col-md-2"><time>8:15–8:25 AM</time></div><div class="col-md-10"><h4>Opening Remarks</h4></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>8:25–8:50 AM</time></div><div class="col-md-10"><h4>Keynote Topic 1</h4><p>Dr. Peter Stone</p></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>8:50–9:15 AM</time></div><div class="col-md-10"><h4>Keynote Topic 2</h4><p>Dr. Chelsea Finn</p></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>9:15–9:40 AM</time></div><div class="col-md-10"><h4>Keynote Topic 3</h4><p>Dr. Sergey Levine</p></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>9:40–10:00 AM</time></div><div class="col-md-10"><h4>Coffee Break & Poster Discussion</h4></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>10:00–10:25 AM</time></div><div class="col-md-10"><h4>Keynote Topic 4</h4><p>Dr. Ziwei Liu</p></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>10:25–10:50 AM</time></div><div class="col-md-10"><h4>Keynote Topic 5</h4><p>Dr. Miao Liu</p></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>10:50–11:35 AM</time></div><div class="col-md-10"><h4>Oral Presentations</h4><p>Authors</p></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>11:35–12:20 PM</time></div><div class="col-md-10"><h4>Poster Discussion</h4></div></div>
+            <div class="row schedule-item"><div class="col-md-2"><time>12:20–12:30 PM</time></div><div class="col-md-10"><h4>Summary of the Workshop</h4><p>Yuanzhe Liu</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Schedule -->
+
+
+    <!-- Organizers -->
+    <section id="organizers" class="speakers section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Organizers</h2>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4 five-per-row justify-content-center">
+
+          <!-- Yuanzhe Liu -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/organizers/YuanzheLiu.jpg" class="img-fluid" alt="Yuanzhe Liu">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Yuanzhe Liu</h4>
+                  <span>University of Illinois Urbana-Champaign</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zhaoyang Li -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/organizers/Zhaoyang_Li.svg" class="img-fluid" alt="Zhaoyang Li">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Zhaoyang Li</h4>
+                  <span>Rutgers University</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Xu Cao -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/organizers/xucao.jpg" class="img-fluid" alt="Xu Cao">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://www.irohxucao.com/" target="_blank">Xu Cao</a></h4>
+                  <span>PediaMed AI & University of Illinois Urbana-Champaign</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Erdem Bıyık -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/organizers/Erdem_Biyik.jpg" class="img-fluid" alt="Erdem Bıyık">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://ebiyik.github.io/" target="_blank">Erdem Bıyık</a></h4>
+                  <span>University of Southern California</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mengdi Xu -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/organizers/Mengdi_Xu.jpg" class="img-fluid" alt="Mengdi Xu">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://mxu34.github.io/" target="_blank">Mengdi Xu</a></h4>
+                  <span>Tsinghua University</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ismini Lourentzou -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/organizers/Ismini_Lourentzou.jpg" class="img-fluid" alt="Ismini Lourentzou">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://isminoula.github.io/" target="_blank">Ismini Lourentzou</a></h4>
+                  <span>University of Illinois Urbana-Champaign</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Abdeslam Boularias -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/organizers/Abdeslam_Boularias.jpeg" class="img-fluid" alt="Abdeslam Boularias">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://www.cs.rutgers.edu/people/professors/details/abdeslam-boularias" target="_blank">Abdeslam Boularias</a></h4>
+                  <span>Rutgers University</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- James M. Rehg -->
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="member">
+              <img src="assets/img/speakers/james.png" class="img-fluid" alt="James M. Rehg">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="https://rehg.org/" target="_blank">James M. Rehg</a></h4>
+                  <span>University of Illinois Urbana-Champaign</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /row -->
+      </div>
+    </section>
+    <!-- /Organizers -->
+
+    <!-- Program Committee -->
+    <section id="committee" class="overview section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Program Committee</h2>
+        <p>The following members have agreed to serve.</p>
+      </div>
+
+      <div class="container">
+        <ul>
+          <li>Bolin Lai, Amazon AGI</li>
+          <li>Maxwell Xu, Google Research</li>
+          <li>Wenqi Jia, University of Illinois Urbana-Champaign</li>
+          <li>Jingyuan Zhu, LinkedIn</li>
+          <li>Ying Shen, NVIDIA</li>
+          <li>Tianjiao Yu, Amazon Robotics</li>
+          <li>Safa Messaoud, QCRI</li>
+          <li>Simon Böhi, University of Basel</li>
+          <li>Anna Lisa Gentile, IBM Research</li>
+          <li>Xiaoqiang Lin, National University of Singapore</li>
+          <li>Yuchen Zhou, University of Pennsylvania</li>
+          <li>Spyridon Bakas, University of Pennsylvania</li>
+          <li>Sangmin Lee, Korea University</li>
+          <li>Yuchen Mo, University of Illinois Urbana-Champaign</li>
+          <li>Xiang Li, University of Illinois Urbana-Champaign</li>
+          <li>Amarachi Madu, Virginia Tech</li>
+          <li>Varol Burak Aydemir, Bodyport</li>
+        </ul>
+      </div>
+    </section>
+    <!-- /Program Committee -->
+
+    <!-- Contact -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Location</h3>
+              <p>Disney Springs, Buena Vista, FL</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-calendar-event"></i>
+              <h3>Conference</h3>
+              <p><a href="https://wacv.thecvf.com/Conferences/2027" target="_blank" rel="noopener noreferrer">WACV 2027</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>yl241@illinois.edu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Contact -->
+
   </main>
-  <footer><div class="container"><strong>SEAI 2027</strong><span>The 1st Workshop on Social Embodied AI · WACV 2027</span></div></footer>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="copyright text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>© Copyright <strong><span>SEAI @ WACV 2027</span></strong>. All Rights Reserved</div>
+          <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
