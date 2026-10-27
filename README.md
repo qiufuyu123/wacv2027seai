@@ -10,4 +10,4 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
-Workshop dates, venue, submission deadline, and submission site are intentionally marked as TBD until confirmed by the WACV 2027 workshop chairs.
+The workshop date and venue are intentionally marked as TBD until confirmed by the WACV 2027 workshop chairs. Submissions are handled through [OpenReview](https://openreview.net/group?id=thecvf.com/WACV/2027/Workshop/SEAI).
